@@ -10,8 +10,8 @@ public class Pan : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            Vector3 position = transform.position;
-            transform.position = new Vector3(position.x - Input.GetAxis("Mouse X") * Speed * Time.deltaTime, position.y, position.z - Input.GetAxis("Mouse Y") * Speed * Time.deltaTime);
+            Vector3 position = new Vector3(transform.position.x - Input.GetAxis("Mouse X") * Speed * Time.deltaTime, transform.position.y, transform.position.z - Input.GetAxis("Mouse Y") * Speed * Time.deltaTime);
+            transform.position = position;
         }
     }
 }
